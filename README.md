@@ -24,3 +24,7 @@ There are a few files in utils:
 - The `example.js` script shows how we can generate a root, generate a proof and verify that some value is in the root using the proof. Try it out from the top-level folder with `node/example.js`
 - The `MerkleTree.js` should look familiar from the Merkle Tree module! This one has been modified so you should not have to deal with any crypto type conversion. You can import this in your client/server
 - The `verifyProof.js` should also look familiar. This was the last stage in the module. You can use this function to prove a name is in the merkle root, as show in the example.
+
+
+## My Solution
+For Running client - `node client/index "<name>"` & for server the command will be same as stated above. The client will create a Merkle Tree instance and generate the proof for the name provided while running the client. These values will be passed in the post req.body as parameters. The server will received these post req.body params and verify the proof by creating the same Merkle Tree using the niceList users. So, any user present in the niceList will be successfully validated and send the gift response else will send the res from the else condition.
